@@ -6,9 +6,11 @@ const HomePage = ({ products }) => {
   return (
     <div>
       <Head>
-        <title>Strapi Next.js E-commerce</title>
+        <title>Huellitas de amor | Adopta un peludito</title>
       </Head>
       <ProductsList products={products} />
+      <div id="nosotros">nosotros</div>
+      <div id="contacto">contacto</div>
     </div>
   );
 };

@@ -1,23 +1,53 @@
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = ({ home }) => {
   return (
-    <div className="flex justify-between ml-6 mr-6 mt-4">
+    <div
+      className={`flex justify-between items-center w-full pt-4 px-6 ${
+        home && "absolute text-white"
+      }`}
+    >
       <Link href="/">
-        <a>
+        <a className="flex items-center">
           <img
-            src="/strapi.png"
-            alt="home"
-            className="logo"
-            height="150"
-            width="150"
+            src="/logo/crop.png"
+            alt="inicio"
+            className="logo mr-4"
+            height="72"
+            width="72"
           />
+          <span>Huellitas de amor</span>
         </a>
       </Link>
-      <button className="snipcart-checkout flex items-center">
-        <img src="/cart.svg" alt="Cart" />
-        <span className="snipcart-total-price ml-3 font-semibold text-sm text-indigo-500"></span>
-      </button>
+
+      <div className="inline-block md:hidden w-6 cursor-pointer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </div>
+
+      <div className="hidden md:block">
+        <Link href="/adopta">
+          <a className="mr-4">Adopta un peludito</a>
+        </Link>
+        <Link href="/#nosotros">
+          <a className="mr-4">Nosotros</a>
+        </Link>
+        <Link href="/#contacto">
+          <a className="mr-4">Contacto</a>
+        </Link>
+        <Link href="/login">
+          <a className="">Login</a>
+        </Link>
+      </div>
     </div>
   );
 };
