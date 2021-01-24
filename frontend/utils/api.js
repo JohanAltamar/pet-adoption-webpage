@@ -27,6 +27,11 @@ export async function getProducts() {
   return products;
 }
 
+export async function getLatestPets() {
+  const products = await fetchAPI("/products?_limit=5&_sort=id:DESC");
+  return products;
+}
+
 export async function getProduct(slug) {
   const products = await fetchAPI(`/products?slug=${slug}`);
   return products?.[0];

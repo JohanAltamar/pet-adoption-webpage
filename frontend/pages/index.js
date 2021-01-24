@@ -1,14 +1,17 @@
 import Head from "next/head";
-import ProductsList from "../components/ProductsList";
-import { getProducts } from "../utils/api";
+import PetList from "../components/LatestPosts";
+import { getProducts, getLatestPets } from "../utils/api";
 
-const HomePage = ({ products }) => {
+const HomePage = ({ pets }) => {
   return (
     <div>
       <Head>
         <title>Huellitas de amor | Adopta un peludito</title>
       </Head>
-      <ProductsList products={products} />
+
+      <h3 className="text-center text-lg mt-6">Publicaciones Recientes</h3>
+      <PetList products={ pets } />
+      
       <div id="nosotros">nosotros</div>
       <div id="contacto">contacto</div>
     </div>
@@ -16,8 +19,8 @@ const HomePage = ({ products }) => {
 };
 
 export async function getStaticProps() {
-  const products = await getProducts();
-  return { props: { products } };
+  const pets = await getLatestPets();
+  return { props: { pets } };
 }
 
 export default HomePage;
