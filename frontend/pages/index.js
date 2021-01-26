@@ -1,4 +1,6 @@
 import Head from "next/head";
+import AboutUs from "../components/AboutUs";
+import ContactForm from "../components/ContactForm";
 import PetList from "../components/LatestPosts";
 import { getProducts, getLatestPets } from "../utils/api";
 
@@ -12,8 +14,9 @@ const HomePage = ({ pets }) => {
       <h3 className="text-center text-lg mt-6">Publicaciones Recientes</h3>
       <PetList products={ pets } />
       
-      <div id="nosotros">nosotros</div>
-      <div id="contacto">contacto</div>
+      < AboutUs id="nosotros" />
+
+      <ContactForm />
     </div>
   );
 };

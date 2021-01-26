@@ -5,7 +5,6 @@ import Navbar from "./Navbar";
 
 const Layout = ({ children, categories }) => {
   const { pathname } = useRouter();
-  console.log(pathname);
 
   return (
     <div className="flex justify-center">
