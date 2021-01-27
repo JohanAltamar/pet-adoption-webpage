@@ -23,5 +23,11 @@ module.exports = {
       "3/4": "75%",
       full: "100%",
     },
+    backgroundColor: (theme) => ({
+      ...theme("colors"),
+      primary: "#FBD10D",
+      secondary: "#ffed4a",
+      danger: "#e3342f",
+    }),
   },
 };

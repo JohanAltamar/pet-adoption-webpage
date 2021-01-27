@@ -11,6 +11,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "axios": "^0.21.1",
     "next": "9.5.5",
     "postcss-flexbugs-fixes": "^4.2.1",
