@@ -66,8 +66,8 @@
   align-items: center;
 }
 
-.container{
-  background-color: rgba(0,0,0,.0);
+.container {
+  background-color: rgba(0, 0, 0, 0);
   min-height: 100vh;
   position: fixed;
   right: -100%;
@@ -77,11 +77,11 @@
 
 .containerOpen {
   right: 0;
-  background-color: rgba(0,0,0,.6);
-  transition: background-color .5s;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.5s;
 }
 
-.backdrop{
+.backdrop {
   width: calc(100vw - 250px);
   height: 100vh;
 }

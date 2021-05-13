@@ -10,10 +10,8 @@ const Layout = ({ children, categories }) => {
     <div className="flex justify-center">
       <div className="max-w-screen-lg flex flex-col min-h-screen w-full">
         <div className="relative">
-          <Navbar home={pathname === "/"}/>
-          {
-            pathname === "/" && (<img src="/dog.jpg"/>)
-          }
+          <Navbar home={pathname === "/"} />
+          {pathname === "/" && <img src="/dog.jpg" />}
         </div>
         <div className="flex-grow">{children}</div>
         <Footer />
