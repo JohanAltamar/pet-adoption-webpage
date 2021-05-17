@@ -1,8 +1,13 @@
 import Link from "next/link";
+import { responsivePadding } from "../styles/stylingVars";
 
-const PetsList = ({ pets }) => {
+const PetsList = ({ home, pets }) => {
   return (
-    <div className="px-10 sm:px-16 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mt-8">
+    <div
+      className={`grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mt-8 ${
+        home ? responsivePadding : ""
+      }`}
+    >
       {pets.map((_pet) => (
         <div
           key={_pet.slug}
