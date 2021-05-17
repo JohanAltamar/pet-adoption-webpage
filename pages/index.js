@@ -14,7 +14,7 @@ const HomePage = ({ pets }) => {
 
       <h3 className="text-center text-lg mt-6">Peluditos Recientes</h3>
 
-      <PetsList pets={pets} />
+      <PetsList pets={pets} home />
 
       <AboutUs id="nosotros" />
 
