@@ -1,0 +1,36 @@
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  background: url(https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: center;
+  max-height: 100vh;
+}
+
+/* SMALL SCREEN */
+@media screen and (min-width: 600px) {
+  .imageContainer {
+    height: 500px;
+  }
+}
+
+/* MEDIUM SCREEN  905px*/
+
+/* LARGE SCREEN */
+@media screen and (min-width: 1240px) {
+  .imageContainer {
+    height: 600px;
+  }
+}
+
+/* EXTRA LARGE SCREEN */
+@media screen and (min-width: 1440px) {
+  .imageContainer {
+    height: 700px;
+  }
+}
+
+.image {
+  position: absolute;
+}
