@@ -1,6 +1,5 @@
 import App from "next/app";
-import Layout from "../components/Layout";
-// import { getCategories } from "../utils/api";
+import Layout from "../components/layoutComponents/Layout";
 import "../styles/index.css";
 
 const MyApp = ({ Component, pageProps }) => {
