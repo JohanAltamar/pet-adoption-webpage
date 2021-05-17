@@ -1,33 +1,16 @@
-const { colors } = require(`tailwindcss/defaultTheme`);
-
 module.exports = {
-  purge: ["./components/**/*.js", "./pages/**/*.js"],
+  purge: [],
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
-      colors: {
-        primary: colors.indigo,
-      },
-      container: {
-        center: true,
-        padding: {
-          default: "1rem",
-          md: "2rem",
-        },
-      },
+    screens: {
+      sm: "600px",
+      md: "905px",
+      lg: "1240px",
+      xl: "1440px",
     },
-    minWidth: {
-      0: "0",
-      250: "250px",
-      "1/4": "25%",
-      "1/2": "50%",
-      "3/4": "75%",
-      full: "100%",
-    },
-    backgroundColor: (theme) => ({
-      ...theme("colors"),
-      primary: "#FBD10D",
-      secondary: "#ffed4a",
-      danger: "#e3342f",
-    }),
   },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
 };
