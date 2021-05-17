@@ -54,14 +54,14 @@ const Navbar = ({ home }) => {
           <Link href="/adopta">
             <a className="mr-4">Adopta un peludito</a>
           </Link>
+          <Link href="/aliados">
+            <a className="mr-4">Aliados</a>
+          </Link>
           <Link href="/#nosotros">
             <a className="mr-4">Nosotros</a>
           </Link>
           <Link href="/#contacto">
             <a className="mr-4">Contacto</a>
-          </Link>
-          <Link href="/login">
-            <a className="">Login</a>
           </Link>
         </div>
       </header>
