@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import navbar from "../styles/navbar.module.css";
+import navbar from "../../styles/navbar.module.css";
 import MenuList from "./MenuList";
+import { responsivePadding } from "../../styles/stylingVars";
 
 const Navbar = ({ home }) => {
   const [menuState, setMenuState] = useState(false); //false: closed, true: open
@@ -13,8 +14,8 @@ const Navbar = ({ home }) => {
 
   return (
     <>
-      <div
-        className={`flex justify-between items-center w-full pt-4 px-6 ${
+      <header
+        className={`flex justify-between items-center z-10 w-full py-4 px-6 ${responsivePadding} ${
           home ? "absolute text-white" : ""
         }`}
       >
@@ -63,7 +64,7 @@ const Navbar = ({ home }) => {
             <a className="">Login</a>
           </Link>
         </div>
-      </div>
+      </header>
       <div
         className={`${
           menuState
