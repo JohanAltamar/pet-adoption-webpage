@@ -10,9 +10,10 @@ import PaginationButtons from "./PaginationButtons";
 import PetsLimitSelect from "./PetsLimitSelect";
 import SideFilter from "./SideFilter/Index";
 import PetsOrderBy from "./PetsOrderBy";
+import Spinner from "../ui/Spinner";
 
 const PetsContainer = () => {
-  const { push, query } = useRouter();
+  const { push, query, replace } = useRouter();
 
   const [loading, setLoading] = useState(false);
 
@@ -37,7 +38,7 @@ const PetsContainer = () => {
       dispatch({ type: "UPDATE_PAGE_PARAMS", payload: query });
       fetchContent(query); // Fetch content with query settings
     } else {
-      push(`/adopta?${getUrlString(pageParams)}`);
+      replace(`/adopta?${getUrlString(pageParams)}`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
@@ -71,7 +72,7 @@ const PetsContainer = () => {
             <PetsLimitSelect limit={limit} onChange={handleLimitChange} />
           </div>
           {loading ? (
-            <h3>Cargando...</h3>
+            <Spinner />
           ) : !!petsList.length ? (
             <PetsList pets={petsList} />
           ) : (
