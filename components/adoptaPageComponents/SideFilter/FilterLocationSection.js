@@ -24,7 +24,7 @@ const FilterLocationSection = ({ title, onChange, pageParams }) => {
     <>
       <h4 className="mt-3">{title}</h4>
       <input
-        className="w-full border-2 border-gray-300 bg-gray-100 rounded p-1"
+        className="w-full border-2 border-gray-300 bg-gray-100 rounded p-1 mb-4"
         list="departamentos"
         name="department"
         id="department"
