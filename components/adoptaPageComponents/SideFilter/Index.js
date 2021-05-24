@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 import Button from "../../ui/Button";
 import FilterLocationSection from "./FilterLocationSection";
@@ -10,6 +10,10 @@ import * as filterOptions from "./filterOptions";
 const SideFilter = () => {
   const router = useRouter();
   const [filter, setFilter] = useState(router.query);
+
+  useEffect(() => {
+    setFilter(router.query);
+  }, [router.query]);
 
   const handleFilterChanges = ([groupName, option]) => {
     // gender: ["male", "female"]
