@@ -4,6 +4,7 @@ import { gql } from "@apollo/client";
 import client from "../../apollo-client";
 import Button from "../../components/ui/Button";
 import { responsivePadding } from "../../styles/stylingVars";
+import SEO from "../../components/SEO";
 
 const AliadosPage = ({ data }) => {
   const router = useRouter();
@@ -12,6 +13,8 @@ const AliadosPage = ({ data }) => {
 
   return (
     <div className={responsivePadding}>
+      <SEO title="Nuestros Aliados" />
+
       <h1 className="text-center text-2xl font-bold tracking-wider">
         Nuestros Aliados
       </h1>
@@ -29,9 +32,10 @@ const AliadosPage = ({ data }) => {
                 <a>
                   <figure className="cursor-pointer">
                     <img
-                      className="w-full rounded-full border-yellow-600 border-4"
+                      className="w-full object-cover p-2 rounded-full border-yellow-600 border-4 hover:border-yellow-700 hover:shadow-xl transition-all duration-300"
                       src={foundation.coverUrl}
                       alt={foundation.name}
+                      style={{ aspectRatio: "1/1" }}
                     />
                     <figcaption className="mt-3 text-center font-bold">
                       {foundation.name}
