@@ -4,13 +4,12 @@ import client from "../apollo-client";
 import AboutUs from "../components/AboutUs";
 import ContactForm from "../components/ContactForm";
 import PetsList from "../components/LatestPosts";
+import SEO from "../components/SEO";
 
 const HomePage = ({ pets }) => {
   return (
     <div>
-      <Head>
-        <title>Huellitas de amor | Adopta un peludito</title>
-      </Head>
+      <SEO />
 
       <h3 className="text-center text-lg mt-6">Peluditos Recientes</h3>
 

@@ -1,9 +1,18 @@
 import { gql } from "@apollo/client";
 import client from "../../../apollo-client";
 import Container from "../../../components/petPageComponents/Container";
+import SEO from "../../../components/SEO";
 
 const FoundationPetPage = ({ info }) => {
-  return <Container info={info} />;
+  return (
+    <>
+      <SEO
+        title={`${info.name} - ${info.foundation.name}`}
+        description={info.description}
+      />
+      <Container info={info} />
+    </>
+  );
 };
 
 export default FoundationPetPage;
@@ -22,7 +31,7 @@ export async function getStaticPaths() {
     `,
   });
 
-  const paths = data.pets.map((pet) => ({
+  const paths = data.pets.map(pet => ({
     params: { pid: pet.slug, slug: pet.foundation.slug },
   }));
 
