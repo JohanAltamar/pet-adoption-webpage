@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className={`flex justify-between py-6 ${responsivePadding}`}>
       <p className="text-xs font-semibold text-gray-600">
-        Huellitas de amor - Desarrollado por{" "}
+        Adopta un amigo - Desarrollado por{" "}
         <a href="https://johanaltamar.com" target="_blank" rel="noreferrer">
           Johan Altamar
         </a>

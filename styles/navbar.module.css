@@ -12,14 +12,15 @@
 }
 
 .nav_menu {
-  background-color: #fff;
-  width: 250px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
   position: fixed;
   top: 0;
   right: -100%;
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -16px 6px 24px rgba(0, 0, 0, 0.4);
   transition: 850ms;
 }
 
@@ -77,7 +78,8 @@
 
 .containerOpen {
   right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
   transition: background-color 0.5s;
 }
 

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import navbar from "../../styles/navbar.module.css";
 import MenuList from "./MenuList";
+import menuOptions from "./menuOptions";
 import { responsivePadding } from "../../styles/stylingVars";
+import navbar from "../../styles/navbar.module.css";
 
 const Navbar = ({ home }) => {
   const [menuState, setMenuState] = useState(false); //false: closed, true: open
@@ -20,7 +21,7 @@ const Navbar = ({ home }) => {
         }`}
       >
         <Link href="/">
-          <a className="flex items-center">
+          <a className="flex items-center font-bold tracking-wider">
             <img
               src="/logo/crop.png"
               alt="inicio"
@@ -28,7 +29,7 @@ const Navbar = ({ home }) => {
               height="72"
               width="72"
             />
-            <span>Huellitas de amor</span>
+            <span>Adopta un amigo</span>
           </a>
         </Link>
 
@@ -50,21 +51,19 @@ const Navbar = ({ home }) => {
           </svg>
         </div>
 
-        <div className="hidden md:block">
-          <Link href="/adopta">
-            <a className="mr-4">Adopta un peludito</a>
-          </Link>
-          <Link href="/aliados">
-            <a className="mr-4">Aliados</a>
-          </Link>
-          <Link href="/#nosotros">
-            <a className="mr-4">Nosotros</a>
-          </Link>
-          <Link href="/#contacto">
-            <a className="mr-4">Contacto</a>
-          </Link>
-        </div>
+        <nav className="hidden md:block w-1/2">
+          <ul className="flex w-full items-center justify-around font-bold tracking-wider">
+            {menuOptions.map(({ label, link }) => (
+              <li key={link}>
+                <Link href={link}>
+                  <a className="">{label}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </header>
+      {/* SIDEBAR CONTAINER WITH BACKGROUND */}
       <div
         className={`${
           menuState
