@@ -5,6 +5,8 @@ import rehypeKatex from "rehype-katex";
 import { responsivePadding } from "../../styles/stylingVars";
 import Card from "./Card";
 import Image from "./Image";
+import { AiOutlineInstagram } from "react-icons/ai";
+import translations from "../../utils/i18n";
 
 const Container = ({ info }) => {
   return (
@@ -15,14 +17,22 @@ const Container = ({ info }) => {
       <div className={`bg-gray-200 py-4 ${responsivePadding}`}>
         {/* PET INFO RESUME */}
         <Card align="center">
-          <h1 className="text-2xl font-bold">{info.name}</h1>
+          <h1 className="flex items-center justify-center text-2xl font-bold">
+            {info.name}
+            {info.instagram ? (
+              <a href={info.instagram} target="_blank" rel="noreferrer">
+                <AiOutlineInstagram className="ml-3" />{" "}
+              </a>
+            ) : null}
+          </h1>
           <small>PetID: {info.id}</small>
           {/* // TODO: add tamaño to colletion */}
           <h4 className="text-lg mt-2">
             {info.city}, {info.department}
           </h4>
-          <h4 className="text-xl mt-2">
-            {info.type} - {info.age} - {info.gender} - tamaño
+          <h4 className="text-xl mt-2 capitalize">
+            {translations[info.type]} - {translations[info.age]} -{" "}
+            {translations[info.gender]} - {translations[info.size]}
           </h4>
         </Card>
         {/* PET DESCRIPTION */}
@@ -33,6 +43,17 @@ const Container = ({ info }) => {
             rehypePlugins={[rehypeKatex]}
             children={info.description}
           />
+          <p className="text-lg">
+            Si estás interesado en adoptar este peludito diligencia el siguiente{" "}
+            <a
+              className="text-yellow-600 hover:text-yellow-800 transition-all duration-300"
+              href={info.foundation.form}
+              target="_blank"
+              rel="noreferrer"
+            >
+              formulario.
+            </a>
+          </p>
         </Card>
         {/* FOUNDATION INFO */}
         <Card>

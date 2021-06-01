@@ -56,6 +56,8 @@ export async function getStaticProps({ params }) {
           gender
           city
           department
+          instagram
+          size
           foundation {
             id
             description
