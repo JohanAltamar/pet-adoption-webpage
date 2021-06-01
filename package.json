@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.18",
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/forms": "^0.3.2",
     "animate.css": "^4.1.1",
     "axios": "^0.21.1",
     "dotenv": "^9.0.2",
