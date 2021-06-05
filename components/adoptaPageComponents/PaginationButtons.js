@@ -7,6 +7,7 @@ const PaginationButtons = ({ showNext, showLast, onPageChange }) => {
     <section className="flex justify-center w-full mt-5">
       {showLast && (
         <Button
+          className="m-2"
           color="secondary"
           variant="outlined"
           rounded="full"
@@ -17,6 +18,7 @@ const PaginationButtons = ({ showNext, showLast, onPageChange }) => {
       )}
       {showNext && (
         <Button
+          className="m-2"
           color="primary"
           variant="outlined"
           rounded="full"

@@ -1,3 +1,23 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.btn {
+  @apply p-2 border-2 hover:shadow-lg font-bold tracking-widest uppercase transition-all duration-300;
+}
+
+.btn-contained-primary {
+  @apply bg-yellow-500 hover:bg-yellow-600 border-transparent text-white;
+}
+
+.btn-contained-secondary {
+  @apply bg-red-500 hover:bg-red-600 border-transparent text-white;
+}
+
+.btn-outlined-primary {
+  @apply bg-transparent border-yellow-500 text-yellow-500 hover:border-yellow-600 hover:text-yellow-600;
+}
+
+.btn-outlined-secondary {
+  @apply bg-transparent border-red-500 text-red-500 hover:border-red-600 hover:text-red-600;
+}
