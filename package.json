@@ -19,11 +19,13 @@
     "dotenv": "^9.0.2",
     "graphql": "^15.5.0",
     "next": "9.5.5",
+    "next-auth": "^3.24.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-hook-form": "^6.14.2",
     "react-icons": "^4.2.0",
     "react-markdown": "^6.0.2",
+    "react-toastify": "^7.0.4",
     "rehype-katex": "^5.0.0",
     "swr": "^0.5.6"
   },
