@@ -10,7 +10,14 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      cursor: ["hover", "focus", "disabled"],
+      opacity: ["disabled"],
+      backgroundColor: ["active", "disabled", "first"],
+      borderColor: ["active", "disabled"],
+      textColor: ["active", "disabled"],
+      margin: ["first"],
+    },
   },
   plugins: [
     require("@tailwindcss/forms"),
