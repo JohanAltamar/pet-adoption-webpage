@@ -1,12 +1,19 @@
 import App from "next/app";
-import Layout from "../components/layoutComponents/Layout";
+import { Provider } from "next-auth/client";
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 import "../styles/index.css";
+import Layout from "../components/layoutComponents/Layout";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <Layout categories={pageProps.categories}>
-      <Component {...pageProps} />
-    </Layout>
+    <Provider session={pageProps.session}>
+      <Layout categories={pageProps.categories}>
+        <Component {...pageProps} />
+        <ToastContainer />
+      </Layout>
+    </Provider>
   );
 };
 
